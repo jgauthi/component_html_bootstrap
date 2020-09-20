@@ -1,0 +1,25 @@
+form:
+    url: 'http://mindev.local/applis/mindphp/array_to_yaml.php'
+    method: POST
+    fields:
+        id:
+            type: hidden
+        name:
+            type: text
+            label: Name
+        password:
+            type: password
+            label: Password
+        mail:
+            type: email
+            label: Email
+        avatar:
+            type: file
+            label: Avatar
+        comment:
+            type: textarea
+            label: Comment
+        cat:
+            type: radio
+            label: Category
+            values: [Guest, Editor, Admin]
