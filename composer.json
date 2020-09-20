@@ -1,0 +1,19 @@
+{
+  "name": "jgauthi/component_html_bootstrap",
+  "description": "Some methods for generate html for bootstrap via PHP",
+  "type": "library",
+  "homepage": "https://github.com/jgauthi/component_html_bootstrap",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": { "Jgauthi\\Component\\Bootstrap\\": "src/" }
+  },
+  "suggest": {
+    "twbs/bootstrap": "(require v4.*) The world’s most popular framework for building responsive, mobile-first sites."
+  },
+  "license": "GPL-3.0",
+  "authors": [
+    { "name": "jgauthi", "homepage": "https://github.com/jgauthi" }
+  ]
+}
