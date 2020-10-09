@@ -1,0 +1,44 @@
+# Asgard Form: Film
+idfilm:
+    field: id
+    table: film
+    type: number
+    label: 'Film ID'
+
+title:
+    field: title
+    table: film
+    type: text
+    label: 'Film Title'
+
+genre:
+    field: genre
+    table: film
+    type: text
+    label: 'Genre'
+
+interdiction:
+    field: interdiction
+    table: film
+    type: text
+    label: 'Interdictions'
+
+release_date:
+    field: release_date
+    table: film
+    type: text # todo add date support
+    label: 'Release date'
+    attributes:
+        placeholder: 'YYYY-MM-DD'
+
+realisateur:
+    field: realisateur
+    table: film
+    type: text
+    label: 'Réalisateur'
+
+distributeur:
+    field: distributeur
+    table: film
+    type: text
+    label: 'Distributeur'
