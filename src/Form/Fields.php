@@ -110,6 +110,9 @@ EOF;
     public function file(string $name, ?string $label = null, array $attributes = []): string
     {
         $attributes['class'] = 'form-control-file';
+        if (isset($attributes['multiple'])) {
+             $name .= '[]';
+        }
 
         return $this->input('file', $name, $label, $attributes);
     }
