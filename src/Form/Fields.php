@@ -161,12 +161,23 @@ EOF;
         $attributes = array_replace_recursive($default, $attributes);
 
         $input = [];
+        $radioCheckedValue = false;
         foreach ($values as $value => $inputLabel) {
             $attributes['id'] = $name.'_'.$value;
-            if ($value === $this->get($name)) {
-                $attributes['checked'] = 'checked';
-            } else {
+
+            if (isset($attributes['checked'])) {
                 unset($attributes['checked']);
+            }
+
+            if (!$radioCheckedValue) {
+                if ($value === $this->get($name)) {
+                    $attributes['checked'] = 'checked';
+                    $radioCheckedValue = true;
+
+                } elseif($this->get($name) === null) { // Checked Radio first value
+                    $attributes['checked'] = 'checked';
+                    $radioCheckedValue = true;
+                }
             }
 
             $input[] = <<<EOF
