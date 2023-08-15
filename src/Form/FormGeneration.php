@@ -2,9 +2,9 @@
 /*****************************************************************************************************
  * @name FormGeneration
  * @note: Form generation via Bootstrap
- * @author: Jgauthi <github.com/jgauthi>, created at [20sept2019]
+ * @author: Jgauthi, created at [28nov2019], url: <github.com/jgauthi/component_html_bootstrap>
  * @Requirements:
-    - Bootstrap 4: https://getbootstrap.com/docs/4.1/components/forms/
+    - Bootstrap 5: https://getbootstrap.com/docs/5.3/components/forms/
     - (optional) Symfony Yaml Component: https://symfony.com/doc/current/components/yaml.html
 
  ******************************************************************************************************/
@@ -14,12 +14,7 @@ use Exception;
 
 class FormGeneration
 {
-    private Fields $fields;
-
-    public function __construct(Fields $fields)
-    {
-        $this->fields = $fields;
-    }
+    public function __construct(private Fields $fields) { }
 
     /**
      * @throws Exception
@@ -70,7 +65,7 @@ class FormGeneration
             }
         }
 
-        return implode("\n", $html);
+        return implode(PHP_EOL, $html);
     }
 
     /**
@@ -117,7 +112,6 @@ class FormGeneration
             }
         } catch (Exception $exception) {
             printf('Unable to parse the YAML string: %s', $exception->getMessage());
-
             return null;
         }
 

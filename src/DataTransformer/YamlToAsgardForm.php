@@ -2,7 +2,7 @@
 /*****************************************************************************************************
  * @name YamlToAsgardForm
  * @note: From a YAML matrix, export under other array formats to manage different libs
- * @author: Jgauthi <github.com/jgauthi>, created at [21nov2019]
+ * @author: Jgauthi, created at [28nov2019], url: <github.com/jgauthi/component_html_bootstrap>
 
  ******************************************************************************************************/
 namespace Jgauthi\Component\Bootstrap\DataTransformer;
@@ -20,7 +20,6 @@ class YamlToAsgardForm
 
     /**
      * Export current matrice to \Jgauthi\Component\BootstrapForm\Fields
-     * @return array
      */
     public function exportToBootstratForm(): array
     {
@@ -41,7 +40,6 @@ class YamlToAsgardForm
 
     /**
      * Export current matrice to applis/taf/*.php
-     * @return array
      */
     public function exportToSqlSearch(): array
     {

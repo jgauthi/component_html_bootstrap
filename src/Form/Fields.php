@@ -2,24 +2,19 @@
 /*****************************************************************************************************
  * @name Fields
  * @note: Génération de bout de code HTML de formulaire pour bootstrap 4
- * @author: Jgauthi <github.com/jgauthi>, created at [18sept2019]
+ * @author: Jgauthi, created at [28nov2019], url: <github.com/jgauthi/component_html_bootstrap>
  * @Requirements:
-    - Bootstrap 4: https://getbootstrap.com/docs/4.1/components/forms/
+    - Bootstrap 5: https://getbootstrap.com/docs/5.3/components/forms/
 
  ******************************************************************************************************/
 namespace Jgauthi\Component\Bootstrap\Form;
 
 class Fields
 {
-    private array $data;
+    public function __construct(private array $data) { }
 
-    public function __construct(array $data)
-    {
-        $this->data = $data;
-    }
 
     //-- Internal methods for generate HTML ------------------------------------------------------------
-
     protected function htmltxt(string $value): string
     {
         return htmlentities($value, ENT_QUOTES, 'UTF-8');
