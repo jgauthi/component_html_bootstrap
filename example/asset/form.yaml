@@ -1,5 +1,5 @@
 form:
-    url: 'http://mindev.local/applis/mindphp/array_to_yaml.php'
+    url: 'http://mindev.localhost/applis/mindphp/array_to_yaml.php'
     method: POST
     fields:
         id:
